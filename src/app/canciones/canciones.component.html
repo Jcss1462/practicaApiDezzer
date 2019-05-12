@@ -1,0 +1,20 @@
+<div class="wrapper">
+    <div id="searchBar">
+  
+      <input type="text" (keyup)= "updateQuery($event)">
+      <button (click)="search()">Buscar</button>
+  
+    </div>
+  
+    <div id="results">
+  
+  
+      <div class="artist" *ngFor="let item of results" (click)="redirect(item.preview)">
+        <img [src]="item.cover"alt="">
+        <div class="name">{{item.title}}</div>
+        <div class="artist">{{item.artista}}</div>
+      </div>
+  
+    </div>
+  
+  </div>
