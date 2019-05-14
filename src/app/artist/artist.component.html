@@ -7,9 +7,18 @@
   </div>
 
   <div id="foto">
+    <img src="{{results.picture_medium}}" alt="">
+  </div>
 
-      <img [src]="{{imagen}}" alt="">
-  
+  <div id="data">
+    <p>
+      Numero de albumes: {{results.nb_album}}
+    </p>
+  </div>
+
+  <div id="boton" (click)="redirect()">
+
+    Ir a la pagina
 
   </div>
 

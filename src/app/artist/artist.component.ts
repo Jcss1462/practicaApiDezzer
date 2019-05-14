@@ -10,7 +10,6 @@ import { Router } from '@angular/router';
 export class ArtistComponent implements OnInit {
 
   private id: string;
-  private imagen: string;
   results: any = [];
 
   constructor(private artistService: ArtistsService,private router: Router) { 
@@ -31,12 +30,16 @@ export class ArtistComponent implements OnInit {
     this.artistService.getArtist(this.id).subscribe((data) => {
 
       this.results=data;
-      this.imagen=data.picture_medium;
-
+      
       console.log(this.results);
 
     });
 
   }
+
+  redirect(){
+    window.location.replace(this.results.link);
+  }
+
 
 }
