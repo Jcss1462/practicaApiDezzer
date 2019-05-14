@@ -10,13 +10,15 @@ import {ArtistsService} from './services/Artists/artists.service'
 import { HttpClientModule } from '@angular/common/http';
 import { CancionesComponent } from './canciones/canciones.component';
 import { ArtistComponent } from './artist/artist.component';
+import { CancionComponent } from './cancion/cancion.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ArtistsComponent,
     CancionesComponent,
-    ArtistComponent
+    ArtistComponent,
+    CancionComponent
   ],
   imports: [
     BrowserModule,

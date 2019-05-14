@@ -1,0 +1,36 @@
+<div id="cuerpo">
+
+  <div id="nombreArtista">
+    <p>
+      {{results.title}}
+    </p>
+  </div>
+
+  <div id="foto">
+    <img src="{{results.album.cover_medium}}" alt="">
+  </div>
+
+  <div id="data">
+    <p>
+      Duracion: {{(results.duration/60).toFixed(2)}}m
+    </p>
+    <br>
+    Fecha de lanzamiento: {{results.release_date}}
+    <br>
+
+  </div>
+
+  <div id="boton">
+
+    <div class="boton" (click)="redirectPage()">
+      Ir a la pagina
+    </div>
+
+    <div class="boton" (click)="redirectPreview()">
+      Escuchar preview
+    </div>
+
+  </div>
+
+
+</div>

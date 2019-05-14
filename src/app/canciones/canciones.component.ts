@@ -28,17 +28,17 @@ export class CancionesComponent implements OnInit {
 
     this.artistService.get(this.query).subscribe((data) => {
 
-      console.log(data);
 
       for (let i = 0; i < data["data"].length; i++) {
         const artist = data["data"][i];
         artist["cover"]=data["data"][i]["album"].cover_small;
         artist["artista"]=data["data"][i]["artist"].name;
-        console.log(artist);
         this.results.push(artist);
       }
 
     });
+
+    console.log(this.results);
 
   }
 

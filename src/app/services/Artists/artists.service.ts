@@ -26,4 +26,9 @@ export class ArtistsService {
   getArtist(id){
     return this.http.get(`https://deezerdevs-deezer.p.rapidapi.com/artist/${id}`,{headers})
   }
+
+  getCancion(id){
+    return this.http.get(`https://deezerdevs-deezer.p.rapidapi.com/track/${id}`,{headers})
+  }
+
 }
