@@ -9,7 +9,7 @@
   <div id="results">
 
 
-    <div class="artist" *ngFor="let item of results" (click)="redirect(item.link)">
+    <div class="artist" *ngFor="let item of results" [routerLink]="['/artista']" [queryParams]="{ id: item.id }">
       <img [src]="item.picture_small" alt="">
       <div class="name">{{item.name}}</div>
     </div>

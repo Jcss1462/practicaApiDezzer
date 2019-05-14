@@ -22,4 +22,8 @@ export class ArtistsService {
     console.log(`https://deezerdevs-deezer.p.rapidapi.com/search?q=${query}`);
     return this.http.get(`https://deezerdevs-deezer.p.rapidapi.com/search?q=${query}`,{headers})
   }
+
+  getArtist(id){
+    return this.http.get(`https://deezerdevs-deezer.p.rapidapi.com/artist/${id}`,{headers})
+  }
 }

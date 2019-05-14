@@ -9,12 +9,14 @@ import {ArtistsService} from './services/Artists/artists.service'
 //modulo cliente html
 import { HttpClientModule } from '@angular/common/http';
 import { CancionesComponent } from './canciones/canciones.component';
+import { ArtistComponent } from './artist/artist.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ArtistsComponent,
-    CancionesComponent
+    CancionesComponent,
+    ArtistComponent
   ],
   imports: [
     BrowserModule,
