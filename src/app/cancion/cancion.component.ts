@@ -12,10 +12,16 @@ import { Router } from '@angular/router';
 export class CancionComponent implements OnInit {
 
   private id: string;
-  results: any = [];
+  _results: any = {
+    album: {
+      cover_medium: "assets/placeholder.gif"
+    }
+  };
+  results: any = {}
 
   constructor(private artistService: ArtistsService,private router: Router) { 
 
+    this.results = this._results;
     this.id=this.router.parseUrl(this.router.url).queryParams.id;
     console.log(this.id);
     this.search();
@@ -28,7 +34,7 @@ export class CancionComponent implements OnInit {
 
   search() {
 
-    this.results = [];
+    this.results = this._results;
 
     this.artistService.getCancion(this.id).subscribe((data) => {
 
